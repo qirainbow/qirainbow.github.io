@@ -15,38 +15,41 @@
         }
         div{
             background-color: aliceblue;
+            text-align: center;
+            font-size: 30px;
             height:47%;
         }
         footer{
             background-color: chartreuse;
             height:20%;
+            text-align: center;
+            font-size: 30px;
         }
     </style>
+    <script>
+        let bigBang = new Date();
+    </script>
 </head>
 <body>
     <header>
-      6
+      1
     </header>
     <div>
-      7
+      12
     </div>
     <footer>
-      8
+      3
     </footer>
  <script>  
-     let mybody = document.querySelector("body");
-     mybody.style.height = innerHeight - 30 + "px";
-     console.time("1to1e9");
-     for (let i = 1; i < 1e9;) {
-         i++;
-     }
-     console.timeEnd("1to1e9");
-    //  let userName = prompt("请输入你的名字")
-    //  let age = prompt("请输入你年龄")
-    //  let gender = prompt("请输入你的性别")
-    //  document.write(userName,age,gender)
-    let arr = ['周一','周二','周三','周四','周五','周六','周日']
-    console.log(arr[6]);
+    let mybody = document.querySelector("body");
+    mybody.style.height = innerHeight - 30 + "px";
+    let luckN = Math.floor(Math.random()*100);
+    let divDom = document.querySelector("div");
+    divDom.textContent=("你的幸运数"+luckN);
+    console.log(luckN);
+    let footerDom = document.querySelector("footer");
+    footerDom.textContent=("渲染web页元素" +(new Date()-bigBang)+"ms")
  </script>
 </body>
 </html>
+
